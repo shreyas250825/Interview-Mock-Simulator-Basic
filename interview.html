@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Simulator | SimuHireAI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interview.css">
+</head>
+<body>
+    <!-- Modern Glass Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html"><img src="assets/logo.png" alt="SimuHireAI Logo" class="logo"></a>
+            </div>
+            <button class="mobile-menu-button" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-center-content">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="interview.html">New Interview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="dashboard.html" id="signInButton" class="btn btn-ghost">Sign In</a>
+                    <a href="interview.html" id="signUpButton" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="interview-container">
+        <div class="container">
+            <section class="interview-setup">
+                <h1>Mock Interview Setup</h1>
+                <div class="setup-options">
+                    <div class="option-card">
+                        <h3><i class="fas fa-laptop-code"></i> Select Domain</h3>
+                        <select id="domainSelect" class="form-select">
+                            <option value="tech">Technology</option>
+                            <option value="business">Business</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="design">Design</option>
+                            <option value="education">Education</option>
+                        </select>
+                    </div>
+                    <div class="option-card">
+                        <h3><i class="fas fa-comments"></i> Interview Type</h3>
+                        <select id="typeSelect" class="form-select">
+                            <option value="behavioral">Behavioral</option>
+                            <option value="technical">Technical</option>
+                            <option value="mixed">Mixed</option>
+                        </select>
+                    </div>
+                    <div class="option-card">
+                        <h3><i class="fas fa-chart-line"></i> Difficulty Level</h3>
+                        <select id="difficultySelect" class="form-select">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="startInterviewBtn" class="btn btn-primary btn-lg">
+                    <i class="fas fa-play"></i> Start Interview
+                </button>
+            </section>
+
+            <section class="interview-screen" id="interviewScreen" style="display: none;">
+                <div class="interview-header">
+                    <h2 id="interviewDomain">Technology Interview</h2>
+                    <div class="interview-progress">
+                        <span id="currentQuestion">1</span> of <span id="totalQuestions">5</span>
+                    </div>
+                </div>
+                
+                <div class="interview-content">
+                    <div class="video-section">
+                        <div class="video-container">
+                            <video id="userVideo" autoplay muted playsinline></video>
+                            <div class="video-overlay" id="videoOverlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-video"></i>
+                                    <p>Your video will appear here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-controls">
+                            <button id="toggleVideoBtn" class="btn btn-outline">
+                                <i class="fas fa-video"></i> Enable Video
+                            </button>
+                            <button id="toggleMicBtn" class="btn btn-outline">
+                                <i class="fas fa-microphone"></i> Enable Mic
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="question-section">
+                        <h3><i class="fas fa-question-circle"></i> Question</h3>
+                        <div class="question-box" id="questionBox"></div>
+                        <div class="timer">
+                            Time Remaining: <span id="time">01:30</span>
+                        </div>
+                    </div>
+                    
+                    <div class="answer-section">
+                        <h3><i class="fas fa-comment"></i> Your Answer</h3>
+                        <div class="recording-controls">
+                            <button id="recordBtn" class="btn btn-primary">
+                                <span class="icon">🎤</span> Start Recording
+                            </button>
+                            <button id="stopBtn" class="btn btn-danger" disabled>
+                                <i class="fas fa-stop"></i> Stop
+                            </button>
+                            <button id="playBtn" class="btn btn-outline" disabled>
+                                <i class="fas fa-play"></i> Play
+                            </button>
+                        </div>
+                        <textarea id="answerText" class="answer-text" placeholder="Your answer will appear here as you speak..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="interview-navigation">
+                    <button id="prevQuestionBtn" class="btn btn-outline" disabled>
+                        <i class="fas fa-arrow-left"></i> Previous
+                    </button>
+                    <button id="nextQuestionBtn" class="btn btn-primary">
+                        Next Question <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button id="finishInterviewBtn" class="btn btn-danger" style="display: none;">
+                        <i class="fas fa-flag-checkered"></i> Finish Interview
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SimuHireAI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/interview.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* Interview Specific Styles */
+.interview-container {
+    padding: 100px 0 50px;
+}
+
+.interview-setup {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.interview-setup h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.setup-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.option-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.option-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Interview Screen */
+.interview-screen {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.interview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.interview-header h2 {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+}
+
+.interview-progress {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Interview Content Layout */
+.interview-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Make answer section twice as wide as question section */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .interview-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-container {
+        height: 250px;
+    }
+    
+    .recording-controls {
+        flex-wrap: wrap;
+    }
+    
+    .recording-controls .btn {
+        flex: 1 1 120px;
+    }
+}
+
+.question-section, .answer-section {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.question-section h3, .answer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.question-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    min-height: 200px;
+    border-left: 4px solid var(--primary-color);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.timer {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.recording-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recording-controls .btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.3);
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+}
+
+.btn-danger:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.answer-text textarea {
+    width: 100%;
+    min-height: 400px;
+    padding: 25px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    resize: vertical;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.answer-text textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+}
+
+.interview-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Add these to your existing interview CSS */
+.video-section {
+    margin-bottom: 30px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+.overlay-content i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.overlay-content p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.video-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.answer-feedback {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    border-left: 4px solid #4361ee;
+}
+
+.answer-feedback h4 {
+    margin-top: 0;
+    color: #4361ee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.answer-feedback h4 i {
+    font-size: 20px;
+}
+
+.feedback-content {
+    line-height: 1.6;
+}
+
+/* Enhanced buttons with icons */
+.btn i {
+    margin-right: 8px;
+}

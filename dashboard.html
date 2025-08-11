@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SimuHireAI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Modern Glass Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html"><img src="assets/logo.png" alt="SimuHireAI Logo" class="logo"></a>
+            </div>
+            <button class="mobile-menu-button" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-center-content">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="interview.html">New Interview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="dashboard.html" id="signInButton" class="btn btn-ghost">Sign In</a>
+                    <a href="interview.html" id="signUpButton" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="container">
+            <section class="welcome-section">
+                <h1>Welcome back, <span id="userName">Siddhi</span>!</h1>
+                <p>Ready for your next mock interview session?</p>
+                <div class="welcome-buttons">
+                    <a href="interview.html" class="btn btn-primary">Start New Interview</a>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <h2>Your Interview Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Completed Interviews</h3>
+                        <p class="stat-value" id="completedInterviews">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Average Score</h3>
+                        <p class="stat-value" id="averageScore">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Areas to Improve</h3>
+                        <p class="stat-value" id="improvementAreas">-</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interview-modes">
+                <h2>Interview Modes</h2>
+                <div class="modes-grid">
+                    <div class="mode-card" data-domain="tech">
+                        <h3>Technology</h3>
+                        <p>Software Engineering, Data Science, DevOps</p>
+                        <a href="interview.html?domain=tech" class="btn btn-outline">Start Tech Interview</a>
+                    </div>
+                    <div class="mode-card" data-domain="business">
+                        <h3>Business</h3>
+                        <p>Marketing, Finance, Management</p>
+                        <a href="interview.html?domain=business" class="btn btn-outline">Start Business Interview</a>
+                    </div>
+                    <div class="mode-card" data-domain="healthcare">
+                        <h3>Healthcare</h3>
+                        <p>Medical, Nursing, Healthcare Admin</p>
+                        <a href="interview.html?domain=healthcare" class="btn btn-outline">Start Healthcare Interview</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-history">
+                <h2>Recent Interviews</h2>
+                <div class="history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Domain</th>
+                                <th>Score</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody">
+                            <!-- Will be populated by JavaScript -->
+                            <tr>
+                                <td colspan="4">No interview history yet</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SimuHireAI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

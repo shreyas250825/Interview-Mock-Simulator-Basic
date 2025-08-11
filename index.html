@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimuHireAI - AI-Powered Interview Preparation Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <span>🎉 New! AI Video Analysis now available for all users</span>
+            <a href="#features" class="learn-more">Learn more →</a>
+        </div>
+    </div>
+
+    <!-- Modern Glass Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html"><img src="assets/logo.png" alt="SimuHireAI Logo" class="logo"></a>
+            </div>
+            <button class="mobile-menu-button" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-center-content">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="interview.html">New Interview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="dashboard.html" id="signInButton" class="btn btn-ghost">Sign In</a>
+                    <a href="interview.html" id="signUpButton" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Gradient Background -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    <span class="highlight">AI-Powered</span> Interview 
+                    <span class="highlight">Coaching</span> Platform
+                </h1>
+                <p class="hero-subtitle">
+                    Practice with realistic AI interviews and land your dream job faster.
+                </p>
+                <div class="hero-cta">
+                    <a href="interview.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-play-circle"></i> Start Free Trial
+                    </a>
+                    <a href="#demo-video" class="btn btn-ghost btn-lg">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Used by 500+ job seekers</span>
+                    </div>
+                    <div class="trust-item">
+                        <i class="fas fa-star"></i>
+                        <span>4.9/5 from 100+ reviews</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left">
+                <div class="mockup-wrapper">
+                    <img src="assets/hero-mockup.png" alt="SimuHireAI Dashboard" class="dashboard-mockup">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="clients-section">
+        <div class="container">
+            <p class="section-label">Trusted by candidates at</p>
+            <div class="client-logos">
+                <img src="assets/logos/google.png" alt="Google">
+                <img src="assets/logos/microsoft.png" alt="Microsoft">
+                <img src="assets/logos/amazon.png" alt="Amazon">
+                <img src="assets/logos/apple.png" alt="Apple">
+                <img src="assets/logos/facebook.png" alt="Facebook">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Features</span>
+                <h2 class="section-title">Everything you need to Ace your Interview</h2>
+                <p class="section-subtitle">Our platform provides comprehensive tools to help you prepare, practice, and perfect your interview skills.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <div class="icon-background">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <h3>AI Interview Simulator</h3>
+                    <p>Practice with our realistic AI interviewer that adapts to your responses and provides follow-up questions.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <div class="icon-background">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                    </div>
+                    <h3>Detailed Analytics</h3>
+                    <p>Get comprehensive feedback on your speech patterns, confidence levels, and answer structure.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <div class="icon-background">
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </div>
+                    <h3>Video Recording</h3>
+                    <p>Record your practice sessions to review your body language, facial expressions, and tone.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <div class="icon-background">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <h3>Personalized Coaching</h3>
+                    <p>Receive tailored recommendations based on your performance to improve specific areas.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <div class="icon-background">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <h3>Question Library</h3>
+                    <p>Access 1,000+ interview questions categorized by industry, role, and difficulty level.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <div class="icon-background">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your improvement over time with detailed metrics and historical data.</p>
+                    <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Process</span>
+                <h2 class="section-title">How SimuHireAI Works</h2>
+                <p class="section-subtitle">Get interview-ready in just a few simple steps</p>
+            </div>
+            
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Select Your Interview Type</h3>
+                        <p>Choose from various interview formats (technical, behavioral, case study) and industries.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="assets/step1.png" alt="Select interview type">
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Practice with AI Interviewer</h3>
+                        <p>Our AI conducts a realistic interview, asking relevant questions and responding naturally.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="assets/step2.png" alt="Practice with AI">
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Receive Instant Feedback</h3>
+                        <p>Get comprehensive analysis on your answers, tone, confidence, and body language.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="assets/step3.png" alt="Receive feedback">
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Improve with Personalized Tips</h3>
+                        <p>Access tailored recommendations and practice materials based on your performance.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="assets/step4.png" alt="Improve with tips">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Our Users Say</h2>
+                <p class="section-subtitle">Hear from candidates who landed their dream jobs with SimuHireAI</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "SimuHireAI completely transformed my interview skills. The AI feedback helped me identify areas I didn't even know needed improvement. I went from struggling with interviews to receiving multiple offers!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="assets/testimonial1.png" alt="Sarah Johnson" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Aayushi Verma</h4>
+                            <p>Software Engineer at Microsoft</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The behavioral interview practice was incredibly realistic. When I did my actual interviews, I felt completely prepared because I had already practiced with similar questions and scenarios."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="assets/testimonial2.png" alt="Michael Chen" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Siddhi Tiwari</h4>
+                            <p>Product Manager at Amazon</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "As someone transitioning careers, the personalized feedback was invaluable. The AI pointed out when I was using too much jargon from my previous industry, which I hadn't even realized I was doing."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="assets/testimonial3.png" alt="David Rodriguez" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Arya Salian</h4>
+                            <p>CFO at Microsoft</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials-cta" data-aos="fade-up">
+                <a href="#" class="btn btn-secondary">
+                    Read more success stories <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Pricing</span>
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">Flexible options to fit your interview preparation needs</p>
+            </div>
+            
+            <div class="pricing-tabs" data-aos="fade-up">
+                <button class="pricing-tab active" data-plan="monthly">Monthly</button>
+                <button class="pricing-tab" data-plan="annual">Annual (Save 30%)</button>
+            </div>
+            
+            <div class="pricing-cards">
+                <!-- Free Plan -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="amount">$0</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="price-description">Perfect for beginners</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 3 AI interviews per month</li>
+                        <li><i class="fas fa-check"></i> Basic speech analysis</li>
+                        <li><i class="fas fa-check"></i> Access to 100+ questions</li>
+                        <li><i class="fas fa-check"></i> Community support</li>
+                        <li><i class="fas fa-check"></i> Basic feedback report</li>
+                    </ul>
+                    <a href="interview.html" class="btn btn-outline">Start Free</a>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="amount">$49</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="price-description">For serious job seekers</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 10 AI interviews per month</li>
+                        <li><i class="fas fa-check"></i> Advanced speech & body language analysis</li>
+                        <li><i class="fas fa-check"></i> Access to 1000+ questions</li>
+                        <li><i class="fas fa-check"></i> Video recording & playback</li>
+                        <li><i class="fas fa-check"></i> Detailed performance analytics</li>
+                        <li><i class="fas fa-check"></i> Priority email support</li>
+                        <li><i class="fas fa-check"></i> Custom interview scenarios</li>
+                    </ul>
+                    <a href="interview.html" class="btn btn-primary">Start 7-Day Free Trial</a>
+                </div>
+                
+                <!-- Team Plan -->
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="amount">$249</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="price-description">For career centers & universities</p>
+                        <p class="price-description">For 15 users</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited AI interviews</li>
+                        <li><i class="fas fa-check"></i> All Professional features</li>
+                        <li><i class="fas fa-check"></i> Custom question bank creation</li>
+                        <li><i class="fas fa-check"></i> Team performance dashboard</li>
+                        <li><i class="fas fa-check"></i> Bulk user management</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> Custom integration support</li>
+                    </ul>
+                    <a href="interview.html" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+            
+            <div class="pricing-faq" data-aos="fade-up">
+                <h4>Frequently Asked Questions</h4>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h5>What's included in the free trial?</h5>
+                        <p>The 7-day free trial includes all Professional features, allowing you to experience the full power of our AI interview platform.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5>Can I upgrade or downgrade my plan?</h5>
+                        <p>Yes, you can change your plan at any time. When upgrading, you'll get immediate access to new features. When downgrading, changes take effect at the end of your billing cycle.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5>How does the AI interview work?</h5>
+                        <p>Our AI conducts realistic interviews using natural language processing and computer vision to analyze your responses, body language, and tone, providing comprehensive feedback.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5>What payment methods do you accept?</h5>
+                        <p>We accept all major credit cards, PayPal, and bank transfers for enterprise customers. All payments are secure and encrypted.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to ace your next interview?</h2>
+                <p>Join thousands of job seekers who landed their dream roles with SimuHireAI.</p>
+                <div class="cta-buttons">
+                    <a href="interview.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-play-circle"></i> Start Free Trial
+                    </a>
+                    <a href="#demo-video" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-video"></i> Watch Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="logo-wrapper">
+                        <img src="assets/cover.png" alt="SimuHireAI Logo" class="logo">
+                    </div>
+                    <p>The most advanced AI-powered interview preparation platform helping candidates land their dream jobs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Interview Tips</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@simuhireai.com</li>
+                        <li><i class="fas fa-phone"></i> (800) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bengaluru, India</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SimuHireAI. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Initialize animations
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mainNav = document.querySelector('.main-nav');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuButton.classList.toggle('active');
+        });
+        
+        // Pricing tabs
+        const pricingTabs = document.querySelectorAll('.pricing-tab');
+        
+        pricingTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                pricingTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // In a real implementation, you would update prices here
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mainNav.classList.remove('active');
+                    mobileMenuButton.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

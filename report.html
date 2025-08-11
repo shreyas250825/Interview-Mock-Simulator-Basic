@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Report | SimuHireAI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/report.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Modern Glass Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html"><img src="assets/logo.png" alt="SimuHireAI Logo" class="logo"></a>
+            </div>
+            <button class="mobile-menu-button" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-center-content">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="interview.html">New Interview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="dashboard.html" id="signInButton" class="btn btn-ghost">Sign In</a>
+                    <a href="interview.html" id="signUpButton" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="report-container">
+        <div class="container">
+            <section class="report-header">
+                <h1>Interview Performance Report</h1>
+                <div class="report-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Date:</span>
+                        <span class="meta-value" id="reportDate">March 20, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Domain:</span>
+                        <span class="meta-value" id="reportDomain">Technology</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Type:</span>
+                        <span class="meta-value" id="reportType">Technical</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Difficulty:</span>
+                        <span class="meta-value" id="reportDifficulty">Intermediate</span>
+                    </div>
+                </div>
+                <button id="downloadPdfBtn" class="btn btn-primary">Download PDF Report</button>
+            </section>
+
+            <section class="overall-score">
+                <h2>Overall Score</h2>
+                <div class="score-card">
+                    <div class="score-circle">
+                        <div class="score-value" id="overallScore">82</div>
+                        <div class="score-label">out of 100</div>
+                    </div>
+                    <div class="score-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Communication:</span>
+                            <span class="detail-value">8.5/10</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Technical Accuracy:</span>
+                            <span class="detail-value">8.0/10</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Confidence:</span>
+                            <span class="detail-value">7.5/10</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Structure:</span>
+                            <span class="detail-value">8.0/10</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feedback-section">
+                <h2>General Feedback</h2>
+                <div class="feedback-card">
+                    <h3>Strengths</h3>
+                    <ul id="strengthsList">
+                        <li>Clear and concise communication style</li>
+                        <li>Strong technical knowledge in your field</li>
+                        <li>Good use of examples to illustrate points</li>
+                    </ul>
+                    
+                    <h3>Areas for Improvement</h3>
+                    <ul id="improvementsList">
+                        <li>Work on structuring answers more systematically (Situation-Task-Action-Result)</li>
+                        <li>Practice speaking more slowly and clearly at times</li>
+                        <li>Include more specific metrics or results in your examples</li>
+                    </ul>
+                    
+                    <h3>Recommendations</h3>
+                    <ul id="recommendationsList">
+                        <li>Practice common behavioral questions using the STAR method</li>
+                        <li>Review core technical concepts in your domain</li>
+                        <li>Record yourself answering questions to observe body language and tone</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="question-feedback">
+                <h2>Question-by-Question Feedback</h2>
+                <div class="questions-list" id="questionsList">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SimuHireAI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/report.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>

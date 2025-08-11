@@ -1,0 +1,275 @@
+/* Report Specific Styles */
+.report-container {
+    padding: 100px 20px 50px 20px;
+}
+
+.report-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.report-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.report-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.meta-item {
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.meta-label {
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.meta-value {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Overall Score Section */
+.overall-score {
+    margin-bottom: 50px;
+}
+
+.overall-score h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.score-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.score-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--primary-color) 82%, #eee 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.score-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.score-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.score-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Feedback Section */
+.feedback-section {
+    margin-bottom: 50px;
+}
+
+.feedback-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.feedback-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-card h3 {
+    font-size: 1.3rem;
+    margin: 25px 0 15px;
+    color: var(--dark-color);
+}
+
+.feedback-card ul {
+    padding-left: 20px;
+}
+
+.feedback-card li {
+    margin-bottom: 10px;
+}
+
+/* Question Feedback Section */
+.question-feedback h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.questions-list {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.question-item {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.question-item:last-child {
+    border-bottom: none;
+}
+
+.question-text {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.feedback-text {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.score-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .score-card {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .detail-item {
+        text-align: left;
+    }
+}
+
+/* Print Styles for PDF */
+@media print {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .report-container {
+        padding: 15mm;
+        margin: 0;
+        max-width: 100%;
+    }
+    
+    /* Force page breaks for specific sections */
+    .overall-score {
+        break-after: page;
+        page-break-after: always;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .question-feedback {
+        break-after: page;
+        page-break-after: always;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .feedback-section {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Ensure content fits within pages */
+    .score-card {
+        break-inside: avoid;
+        margin-bottom: 20mm;
+    }
+
+    .questions-list {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    .question-item {
+        break-inside: avoid;
+        padding: 5mm;
+        margin-bottom: 5mm;
+    }
+
+    .feedback-card {
+        break-inside: avoid;
+        margin-bottom: 10mm;
+    }
+
+    /* Adjust text sizes for better fit */
+    h1 { font-size: 24pt !important; }
+    h2 { font-size: 20pt !important; }
+    h3 { font-size: 16pt !important; }
+    p, li { font-size: 12pt !important; }
+
+    /* Hide non-print elements */
+    .main-header, 
+    footer, 
+    #downloadPdfBtn {
+        display: none !important;
+    }
+}
